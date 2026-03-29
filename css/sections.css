@@ -434,9 +434,8 @@
 
   .section-fullbleed-stats {
     display: flex;
-    gap: var(--s-10);
+    gap: var(--s-8);
     margin-top: var(--s-10);
-    flex-wrap: wrap;
   }
 
   .section-fullbleed-stat-value {
