@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Калькулятор стоимости доставки — ООО ЕГОРЬЕ</title>
+  <meta name="description" content="Рассчитайте стоимость песка, щебня или гальки с доставкой. Онлайн-калькулятор ООО ЕГОРЬЕ.">
+  <meta property="og:title" content="Калькулятор стоимости доставки — ООО ЕГОРЬЕ">
+  <meta property="og:description" content="Рассчитайте стоимость песка, щебня или гальки с доставкой. Онлайн-калькулятор ООО ЕГОРЬЕ.">
+  <link rel="canonical" href="https://egorye.ru/kalkulyator.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Unbounded:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Перейти к содержимому</a>
+  <header id="site-header"></header>
+
+  <main id="main-content">
+    <section class="page-hero container">
+      <nav class="breadcrumbs" aria-label="Навигация по сайту">
+        <a href="index.html">Главная</a> <span>/</span> <span>Калькулятор</span>
+      </nav>
+      <div class="page-hero-content" data-reveal="up">
+        <span class="label">Онлайн-расчёт</span>
+        <h1 class="headline-section">Калькулятор стоимости</h1>
+        <p class="body-lg">Рассчитайте примерную стоимость материала с доставкой. Для точного расчёта свяжитесь с менеджером.</p>
+      </div>
+    </section>
+
+    <section class="section container" aria-labelledby="calc-title">
+      <div class="calc-section" data-calculator data-reveal="up">
+        <div class="section-header">
+          <span class="label">Онлайн-расчёт</span>
+          <h2 class="headline-section" id="calc-title">Рассчитайте стоимость</h2>
+          <p class="body-text">Укажите материал, объём и расстояние — получите примерную стоимость мгновенно.</p>
+        </div>
+
+        <div class="calc-grid">
+          <div class="field">
+            <label class="field-label" for="calc-mat">Материал</label>
+            <select class="input" id="calc-mat" data-calc-material>
+              <option value="">Выберите материал</option>
+              <option value="pesok-seyanyy">Песок сеяный</option>
+              <option value="pesok-mytyy">Песок мытый</option>
+              <option value="shcheben-5-20">Щебень 5–20</option>
+              <option value="galka">Галька</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="field-label" for="calc-vol">Объём</label>
+            <input class="input" id="calc-vol" type="number" min="0" step="0.5" placeholder="Количество" data-calc-volume>
+          </div>
+          <div class="field">
+            <label class="field-label" for="calc-unit">Единицы</label>
+            <select class="input" id="calc-unit" data-calc-unit>
+              <option value="ton">Тонны</option>
+              <option value="m3">Куб. метры</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="field-label" for="calc-dist">Расстояние, км</label>
+            <input class="input" id="calc-dist" type="number" min="0" step="1" placeholder="От карьера" data-calc-distance>
+          </div>
+        </div>
+
+        <div class="calc-result">
+          <div>
+            <div class="calc-result-label">Примерная стоимость</div>
+            <div style="font-size:var(--t-xs);color:var(--c-text-3);margin-top:2px" data-calc-detail>Укажите параметры для расчёта</div>
+          </div>
+          <div class="calc-result-value" data-calc-result>—</div>
+        </div>
+
+        <p style="font-size:var(--t-xs);color:var(--c-text-3);margin-top:var(--s-4)">
+          * Цены ориентировочные. Точную стоимость уточняйте у менеджера по телефону или через форму ниже.
+        </p>
+      </div>
+    </section>
+
+    <section class="section container" aria-labelledby="ref-info-title">
+      <div class="section-header" data-reveal="up">
+        <span class="label">Справка</span>
+        <h2 class="headline-section" id="ref-info-title">Справочная информация</h2>
+        <p class="body-text">Ориентировочные цены за тонну и насыпная плотность для пересчёта объёма.</p>
+      </div>
+      <div data-reveal="up" style="overflow-x:auto">
+        <table class="price-table">
+          <thead>
+            <tr>
+              <th scope="col">Материал</th>
+              <th scope="col">Цена за тонну</th>
+              <th scope="col">Насыпная плотность</th>
+              <th scope="col">Ссылка</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="pesok-seyanyy.html" style="color:var(--c-brand);text-decoration:underline;text-underline-offset:2px">Песок сеяный</a></td>
+              <td class="price-value">от 350 ₽</td>
+              <td>1.5 т/м³</td>
+              <td><a href="pesok-seyanyy.html" style="color:var(--c-brand);text-decoration:underline;text-underline-offset:2px">Подробнее</a></td>
+            </tr>
+            <tr>
+              <td><a href="pesok-mytyy.html" style="color:var(--c-brand);text-decoration:underline;text-underline-offset:2px">Песок мытый</a></td>
+              <td class="price-value">от 550 ₽</td>
+              <td>1.6 т/м³</td>
+              <td><a href="pesok-mytyy.html" style="color:var(--c-brand);text-decoration:underline;text-underline-offset:2px">Подробнее</a></td>
+            </tr>
+            <tr>
+              <td><a href="shcheben-5-20.html" style="color:var(--c-brand);text-decoration:underline;text-underline-offset:2px">Щебень гранит 5–20</a></td>
+              <td class="price-value">от 1 800 ₽</td>
+              <td>1.4 т/м³</td>
+              <td><a href="shcheben-5-20.html" style="color:var(--c-brand);text-decoration:underline;text-underline-offset:2px">Подробнее</a></td>
+            </tr>
+            <tr>
+              <td><a href="galka.html" style="color:var(--c-brand);text-decoration:underline;text-underline-offset:2px">Галька</a></td>
+              <td class="price-value">от 5 500 ₽</td>
+              <td>1.6 т/м³</td>
+              <td><a href="galka.html" style="color:var(--c-brand);text-decoration:underline;text-underline-offset:2px">Подробнее</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section container" id="callback" aria-labelledby="calc-cta-title">
+      <div class="cta-section noise">
+        <div class="container">
+          <div class="cta-inner">
+            <div class="cta-content" data-reveal="left">
+              <span class="label">Консультация</span>
+              <h2 class="headline-section" id="calc-cta-title">Нужна помощь с расчётом?</h2>
+              <p class="body-lg">Менеджер перезвонит и подготовит точный расчёт с учётом вашего адреса и объёма.</p>
+            </div>
+            <div class="cta-form" data-reveal="right">
+              <form data-form class="form-grid" novalidate>
+                <div class="field">
+                  <label class="field-label" for="calc-help-name">Ваше имя</label>
+                  <input class="input" id="calc-help-name" name="name" type="text" placeholder="Иван" required aria-describedby="calc-help-name-err" aria-invalid="false">
+                  <p class="field-error" id="calc-help-name-err" role="alert" hidden></p>
+                </div>
+                <div class="field">
+                  <label class="field-label" for="calc-help-phone">Телефон</label>
+                  <input class="input" id="calc-help-phone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" required aria-describedby="calc-help-phone-err" aria-invalid="false">
+                  <p class="field-error" id="calc-help-phone-err" role="alert" hidden></p>
+                </div>
+                <div class="field" style="grid-column:1/-1">
+                  <label class="field-label" for="calc-help-msg">Сообщение</label>
+                  <textarea class="input" id="calc-help-msg" name="message" placeholder="Материал, объём, адрес доставки..." rows="3"></textarea>
+                </div>
+                <div style="grid-column:1/-1;display:flex;flex-direction:column;gap:var(--s-3)">
+                  <button type="submit" class="btn btn-accent btn-lg" style="width:100%">Отправить</button>
+                  <p class="form-consent">Нажимая кнопку, вы соглашаетесь с <a href="dokumenty.html">политикой конфиденциальности</a></p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+  <script src="js/shared.js" defer></script>
+  <script src="js/calculator.js" defer></script>
+  <script src="js/forms.js" defer></script>
+</body>
+</html>

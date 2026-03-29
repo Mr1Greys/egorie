@@ -1,0 +1,115 @@
+@layer tokens {
+  :root {
+    /* ── BRAND ──────────────────────────────── */
+    --brand-h: 155;
+    --brand-c: 0.08;
+    --brand-l: 0.42;
+
+    --c-brand:        oklch(var(--brand-l) var(--brand-c) var(--brand-h));
+    --c-brand-hover:  oklch(0.36 0.08 155);
+    --c-brand-active: oklch(0.30 0.07 155);
+    --c-brand-subtle: oklch(0.42 0.08 155 / 0.12);
+    --c-brand-muted:  oklch(0.42 0.03 155);
+
+    /* ── ACCENT (песочный) ──────────────────── */
+    --accent-h: 75;
+    --c-accent:        oklch(0.78 0.06 var(--accent-h));
+    --c-accent-hover:  oklch(0.72 0.07 var(--accent-h));
+    --c-accent-subtle: oklch(0.78 0.06 75 / 0.15);
+
+    /* ── SURFACES ───────────────────────────── */
+    --c-bg:            oklch(0.975 0.003 80);
+    --c-surface-1:     oklch(0.993 0 0);
+    --c-surface-2:     oklch(0.94 0.005 80);
+    --c-border:        oklch(0.90 0.005 80);
+    --c-border-subtle: oklch(0.93 0.003 80);
+
+    /* ── TEXT ────────────────────────────────── */
+    --c-text:          oklch(0.18 0.01 250);
+    --c-text-2:        oklch(0.45 0.01 250);
+    --c-text-3:        oklch(0.60 0.01 250);
+    --c-text-inverse:  oklch(0.97 0 0);
+
+    /* ── SEMANTIC ───────────────────────────── */
+    --c-success: oklch(0.62 0.19 145);
+    --c-error:   oklch(0.58 0.22 25);
+    --c-warning: oklch(0.75 0.18 75);
+    --c-info:    oklch(0.58 0.19 250);
+
+    /* ── TYPOGRAPHY ─────────────────────────── */
+    --f-display: 'Unbounded', cursive;
+    --f-body:    'Golos Text', sans-serif;
+    --f-mono:    'JetBrains Mono', monospace;
+
+    /* ── TYPE SCALE (fluid, clamp-based) ────── */
+    --t-xs:   clamp(0.69rem, 0.66rem + 0.18vw, 0.78rem);
+    --t-sm:   clamp(0.83rem, 0.78rem + 0.29vw, 1.00rem);
+    --t-base: clamp(1.00rem, 0.93rem + 0.38vw, 1.20rem);
+    --t-lg:   clamp(1.20rem, 1.10rem + 0.50vw, 1.44rem);
+    --t-xl:   clamp(1.44rem, 1.30rem + 0.70vw, 1.73rem);
+    --t-2xl:  clamp(1.73rem, 1.55rem + 0.90vw, 2.07rem);
+    --t-3xl:  clamp(2.07rem, 1.85rem + 1.10vw, 2.49rem);
+    --t-4xl:  clamp(2.49rem, 2.20rem + 1.45vw, 2.99rem);
+    --t-5xl:  clamp(3.00rem, 2.60rem + 2.00vw, 4.00rem);
+    --t-6xl:  clamp(4.00rem, 3.40rem + 3.00vw, 6.50rem);
+    --t-hero: clamp(3.50rem, 2.00rem + 6.00vw, 8.00rem);
+
+    /* ── SPACING (8px grid, rem) ────────────── */
+    --s-1:  0.25rem;
+    --s-2:  0.5rem;
+    --s-3:  0.75rem;
+    --s-4:  1rem;
+    --s-5:  1.25rem;
+    --s-6:  1.5rem;
+    --s-8:  2rem;
+    --s-10: 2.5rem;
+    --s-12: 3rem;
+    --s-16: 4rem;
+    --s-20: 5rem;
+    --s-24: 6rem;
+    --s-32: 8rem;
+    --s-40: 10rem;
+    --s-48: 12rem;
+
+    --section-gap: clamp(4rem, 8vw, 8rem);
+
+    /* ── LAYOUT ─────────────────────────────── */
+    --container:    1280px;
+    --container-sm: 960px;
+    --container-xs: 720px;
+    --gutter:       clamp(1rem, 4vw, 4rem);
+
+    /* ── RADIUS ─────────────────────────────── */
+    --r-xs:   2px;
+    --r-sm:   4px;
+    --r-md:   8px;
+    --r-lg:   16px;
+    --r-xl:   24px;
+    --r-2xl:  32px;
+    --r-full: 9999px;
+
+    /* ── SHADOWS ─────────────────────────────── */
+    --shadow-xs:  0 1px 2px oklch(0 0 0 / 0.04);
+    --shadow-sm:  0 2px 8px oklch(0 0 0 / 0.06);
+    --shadow-md:  0 4px 20px oklch(0 0 0 / 0.08);
+    --shadow-lg:  0 8px 32px oklch(0 0 0 / 0.10);
+    --shadow-xl:  0 16px 48px oklch(0 0 0 / 0.14);
+    --shadow-2xl: 0 24px 64px oklch(0 0 0 / 0.18);
+    --shadow-glow: 0 0 40px oklch(0.42 0.08 155 / 0.25);
+
+    /* ── MOTION ──────────────────────────────── */
+    --dur-instant:   80ms;
+    --dur-fast:      150ms;
+    --dur-base:      250ms;
+    --dur-slow:      400ms;
+    --dur-slower:    600ms;
+    --dur-cinematic: 1000ms;
+
+    --ease-default:   cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-out:       cubic-bezier(0, 0, 0.2, 1);
+    --ease-in:        cubic-bezier(0.4, 0, 1, 1);
+    --ease-spring:    cubic-bezier(0.34, 1.56, 0.64, 1);
+    --ease-bounce:    cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    --ease-cinematic: cubic-bezier(0.76, 0, 0.24, 1);
+  }
+}
